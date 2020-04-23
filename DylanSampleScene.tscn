@@ -91,16 +91,16 @@ transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 240.316, 37.9515, 240
 transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 269.145, 32.0012, 240.197 )
 
 [node name="scene7" parent="." instance=ExtResource( 13 )]
-transform = Transform( -0.03, 0, -2.62268e-09, 0, 0.03, 0, 2.62268e-09, 0, -0.03, 151.975, 17.3425, 156.739 )
+transform = Transform( -0.03, 0, -2.62268e-009, 0, 0.03, 0, 2.62268e-009, 0, -0.03, 151.975, 17.3425, 156.739 )
 
 [node name="scene11" parent="." instance=ExtResource( 14 )]
-transform = Transform( -2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 255.444, 65.3174, 343.874 )
+transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008, 255.444, 65.3174, 343.874 )
 
 [node name="scene12" parent="." instance=ExtResource( 15 )]
 transform = Transform( 0.00707107, 0, -0.00707107, 0, 0.01, 0, 0.00707107, 0, 0.00707107, 32.0331, 28.7555, 162.819 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -0.213187, 0.574201, -0.790471, 0.149517, 0.818714, 0.554393, 0.965503, 7.19356e-09, -0.260392, 9.79518, 25.0681, 106.396 )
+transform = Transform( -0.213187, 0.574201, -0.790471, 0.149517, 0.818714, 0.554393, 0.965503, 7.19356e-009, -0.260392, 9.79518, 25.0681, 106.396 )
 script = ExtResource( 16 )
 mouse_mode = 0
 privot = NodePath("../KinematicBody")
