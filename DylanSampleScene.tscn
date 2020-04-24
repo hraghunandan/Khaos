@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://addons/zylann.hterrain/hterrain.gd" type="Script" id=1]
 [ext_resource path="res://addons/zylann.hterrain/tools/icons/icon_heightmap_node.svg" type="Texture" id=2]
@@ -18,6 +18,8 @@
 [ext_resource path="res://assets/maujoe.camera_control/scripts/camera_control.gd" type="Script" id=16]
 [ext_resource path="res://enemyMesh.tscn" type="PackedScene" id=17]
 [ext_resource path="res://testbody.tscn" type="PackedScene" id=18]
+[ext_resource path="res://assets/god_temple/temple.gltf" type="PackedScene" id=19]
+[ext_resource path="res://assets/francis-ernest-stowe-three-way-bridge/source/3-Way Bridge.gltf" type="PackedScene" id=20]
 
 [sub_resource type="Animation" id=1]
 resource_name = "enemy1animation"
@@ -35,6 +37,11 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector3( 20.5965, -0.984645, 106.396 ), Vector3( 20.5965, -0.984645, 125.468 ), Vector3( 20.5965, -0.984645, 110.475 ), Vector3( 20.5965, -0.984645, 102.078 ) ]
 }
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.415064, 0.00735562, 6.35536 )
+
+[sub_resource type="BoxShape" id=3]
 
 [node name="Main" type="Spatial"]
 
@@ -63,40 +70,37 @@ ground/normal_roughness_3 = ExtResource( 11 )
 transform = Transform( 0.160412, 0.753862, -0.63715, -0.758223, 0.507396, 0.409447, 0.631954, 0.417422, 0.652988, 174.516, 164.036, 258.955 )
 shadow_enabled = true
 
-[node name="scene" parent="." instance=ExtResource( 12 )]
+[node name="Tree" parent="." instance=ExtResource( 12 )]
 transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 56.1402, 39.2258, 177.919 )
 
-[node name="scene2" parent="." instance=ExtResource( 12 )]
+[node name="Tree2" parent="." instance=ExtResource( 12 )]
 transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 78.7044, 25.1337, 142.722 )
 
-[node name="scene3" parent="." instance=ExtResource( 12 )]
+[node name="Tree3" parent="." instance=ExtResource( 12 )]
 transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 110.472, 35.2571, 161.703 )
 
-[node name="scene4" parent="." instance=ExtResource( 12 )]
+[node name="Tree4" parent="." instance=ExtResource( 12 )]
 transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 87.3119, 39.2258, 175.84 )
 
-[node name="scene5" parent="." instance=ExtResource( 12 )]
+[node name="Tree5" parent="." instance=ExtResource( 12 )]
 transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 159.72, 24.8367, 187.147 )
 
-[node name="scene6" parent="." instance=ExtResource( 12 )]
-transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 159.72, 24.8367, 187.147 )
-
-[node name="scene8" parent="." instance=ExtResource( 12 )]
+[node name="Tree6" parent="." instance=ExtResource( 12 )]
 transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 199.043, 23.4051, 187.147 )
 
-[node name="scene9" parent="." instance=ExtResource( 12 )]
+[node name="Tree7" parent="." instance=ExtResource( 12 )]
 transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 240.316, 37.9515, 240.197 )
 
-[node name="scene10" parent="." instance=ExtResource( 12 )]
+[node name="Tree8" parent="." instance=ExtResource( 12 )]
 transform = Transform( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 269.145, 32.0012, 240.197 )
 
-[node name="scene7" parent="." instance=ExtResource( 13 )]
+[node name="Ruins" parent="." instance=ExtResource( 13 )]
 transform = Transform( -0.03, 0, -2.62268e-009, 0, 0.03, 0, 2.62268e-009, 0, -0.03, 151.975, 17.3425, 156.739 )
 
-[node name="scene11" parent="." instance=ExtResource( 14 )]
+[node name="Temple" parent="." instance=ExtResource( 14 )]
 transform = Transform( -2.18557e-008, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-008, 255.444, 65.3174, 343.874 )
 
-[node name="scene12" parent="." instance=ExtResource( 15 )]
+[node name="Prison" parent="." instance=ExtResource( 15 )]
 transform = Transform( 0.00707107, 0, -0.00707107, 0, 0.01, 0, 0.00707107, 0, 0.00707107, 32.0331, 28.7555, 162.819 )
 
 [node name="Camera" type="Camera" parent="."]
@@ -115,4 +119,27 @@ anims/enemy1animation = SubResource( 1 )
 
 [node name="KinematicBody" parent="." instance=ExtResource( 18 )]
 transform = Transform( -0.000848456, 0, 1, 0, 1, 0, -1, 0, -0.000848456, 0, 6.59347, 105.248 )
+
+[node name="Temple2" parent="." instance=ExtResource( 19 )]
+transform = Transform( 0.0841117, 0, -0.0540854, 0, 0.1, 0, 0.0540854, 0, 0.0841117, 24.4464, 25.7191, 478.686 )
+
+[node name="3-Way Bridge" parent="." instance=ExtResource( 20 )]
+editor/display_folded = true
+transform = Transform( -3.81039, -3.37243e-009, -6.02478, 4.20942e-009, 7.12861, -6.65256e-009, 6.02478, -7.11354e-009, -3.81039, 156.949, 14.5272, 366.04 )
+
+[node name="CollisionShape" type="CollisionShape" parent="3-Way Bridge"]
+transform = Transform( 0.998834, 4.57488e-011, 0.048283, -4.437e-011, 1, -2.95993e-011, -0.048283, 2.74204e-011, 0.998834, -0.448719, 0.790202, -7.91219 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="3-Way Bridge"]
+transform = Transform( 0.550496, -5.13656e-010, -0.834838, 1.04452e-009, 1, 7.34825e-011, 0.834838, -9.12454e-010, 0.550496, -5.12863, 0.800862, 3.27075 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="3-Way Bridge"]
+transform = Transform( -0.441358, 1.37083e-011, -0.897331, 1.68852e-009, 1, -8.15233e-010, 0.897331, -1.87497e-009, -0.441358, 6.20584, 0.808847, 3.2837 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="3-Way Bridge"]
+transform = Transform( 1, -2.77556e-017, 0, 0, 0.1, 1.11022e-016, 0, -8.67362e-017, 1, -0.135509, 0.709553, 0.0345917 )
+shape = SubResource( 3 )
 [connection signal="body_entered" from="Area" to="KinematicBody" method="_on_Area_body_entered"]
