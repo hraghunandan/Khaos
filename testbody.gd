@@ -69,3 +69,7 @@ func set_anim(dir):
 func _on_Area_body_entered(body):
 	if body.name == "KinematicBody":
 		get_tree().change_scene("res://gameover.tscn")
+
+
+func _on_PortalEntrance_body_shape_entered(body_id, body, body_shape, area_shape):
+	pass # Replace with function body.
