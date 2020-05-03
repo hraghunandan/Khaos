@@ -1,5 +1,7 @@
 extends KinematicBody
 
+signal damage(health)
+
 var camera_angle = 0
 var mouse_sensitivity = 0.3
 
@@ -15,6 +17,7 @@ const MAX_SPEED = 20
 const MAX_RUNNING_SPEED = 30
 const ACCEL = 2
 const DEACCEL = 6
+var health = 10
 
 var jump_height = 20
 
@@ -118,7 +121,12 @@ func fly(delta):
 # warning-ignore:unused_argument
 func _on_Area2_body_entered(body):
 # warning-ignore:return_value_discarded
-	get_tree().change_scene("res://gameover.tscn")
+	if (health == 0):
+		get_tree().change_scene("res://gameover.tscn")
+	else:
+		emit_signal("damage", health)
+		health = health - 1
+	
 
 
 #func _on_Area_body_entered(body):
