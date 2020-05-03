@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/victory.png" type="Texture" id=1]
 [ext_resource path="res://assets/main_menu.png" type="Texture" id=2]
-[ext_resource path="res://NewGame.gd" type="Script" id=3]
+[ext_resource path="res://MainMenu.gd" type="Script" id=3]
 [ext_resource path="res://assets/exit.png" type="Texture" id=4]
 [ext_resource path="res://Exit.gd" type="Script" id=5]
 
@@ -57,5 +57,5 @@ margin_bottom = 243.0
 size_flags_horizontal = 4
 icon = ExtResource( 4 )
 script = ExtResource( 5 )
-[connection signal="pressed" from="Menu/CenterRow/Buttons/MainMenu" to="Menu/CenterRow/Buttons/MainMenu" method="_on_NewGame_pressed"]
+[connection signal="button_up" from="Menu/CenterRow/Buttons/MainMenu" to="Menu/CenterRow/Buttons/MainMenu" method="_on_MainMenu_button_up"]
 [connection signal="button_up" from="Menu/CenterRow/Buttons/Exit" to="Menu/CenterRow/Buttons/Exit" method="_on_Exit_button_up"]
