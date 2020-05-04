@@ -201,3 +201,7 @@ func _on_hellDog3_body_entered(body):
 	else:
 		emit_signal("damage", health)
 		health = health - 1
+
+
+func _on_dogGuard_body_entered(body):
+	get_tree().change_scene("res://gameover.tscn")
