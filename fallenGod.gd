@@ -152,3 +152,20 @@ func _on_Area_body_entered(body):
 
 func _on_Area_body1_entered(body):
 	get_node("../Orb").hide()
+
+
+func _on_Area_bodyGod_entered(body):
+	get_tree().change_scene("res://gameover.tscn")
+
+
+func _on_Area_bodyIS_entered(body):
+	get_tree().change_scene("res://Victory.tscn")
+	
+
+
+func orbTable(body):
+	get_node("../OrbTable").hide()
+
+
+func orbTable2(body):
+	get_node("../OrbTable2").hide()
