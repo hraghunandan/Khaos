@@ -17,7 +17,7 @@ const MAX_SPEED = 20
 const MAX_RUNNING_SPEED = 30
 const ACCEL = 2
 const DEACCEL = 6
-var health = 10
+var health = 5
 
 var jump_height = 20
 
@@ -177,3 +177,11 @@ func spikeBall(body):
 	get_node("../Orb3").hide()
 	get_node("../Portal/Swirl").show()
 
+
+
+func _on_hellDog_body_entered(body):
+	if (health == 0):
+		get_tree().change_scene("res://gameover.tscn")
+	else:
+		emit_signal("damage", health)
+		health = health - 1
