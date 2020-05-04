@@ -5,7 +5,7 @@
 [ext_resource path="res://Play.gd" type="Script" id=3]
 [ext_resource path="res://assets/main_menu.png" type="Texture" id=4]
 [ext_resource path="res://MainMenu.gd" type="Script" id=5]
-[ext_resource path="res://assets/howtotext.png" type="Texture" id=6]
+[ext_resource path="res://assets/howtoplaytext.png" type="Texture" id=6]
 
 [node name="TitleScreen" type="Control"]
 margin_right = 1280.0
@@ -14,7 +14,7 @@ margin_bottom = 720.0
 [node name="Background" type="ColorRect" parent="."]
 margin_right = 1276.0
 margin_bottom = 717.0
-color = Color( 0.545098, 0.541176, 0.541176, 1 )
+color = Color( 1, 0.537255, 0.537255, 1 )
 
 [node name="Menu" type="VBoxContainer" parent="."]
 margin_left = 120.0
@@ -57,10 +57,10 @@ icon = ExtResource( 4 )
 script = ExtResource( 5 )
 
 [node name="Text" type="TextureRect" parent="."]
-margin_left = 119.3
-margin_top = 471.525
-margin_right = 1184.3
-margin_bottom = 669.525
+margin_left = 287.0
+margin_top = 472.0
+margin_right = 1058.0
+margin_bottom = 688.0
 texture = ExtResource( 6 )
 [connection signal="button_up" from="Menu/CenterRow/Buttons/Play" to="Menu/CenterRow/Buttons/Play" method="_on_Play_button_up"]
 [connection signal="button_up" from="Menu/CenterRow/Buttons/MainMenu" to="Menu/CenterRow/Buttons/MainMenu" method="_on_MainMenu_button_up"]
