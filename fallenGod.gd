@@ -207,9 +207,6 @@ func _on_hellDog3_body_entered(body):
 
 
 
-func dogGuard(body):
-	print("yo")
-
 
 func _on_Area3_body_entered(body):
-	print("yo")
+	get_tree().change_scene("res://gameover.tscn") 
