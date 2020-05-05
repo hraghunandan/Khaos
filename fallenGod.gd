@@ -205,5 +205,11 @@ func _on_hellDog3_body_entered(body):
 		health = health - 1
 
 
-func _on_dogGuard_body_entered(body):
-	get_tree().change_scene("res://gameover.tscn")
+
+
+func dogGuard(body):
+	print("yo")
+
+
+func _on_Area3_body_entered(body):
+	print("yo")
