@@ -149,13 +149,13 @@ func _on_Area2_body_entered(body):
 func _on_Area_body_entered(body):
 	get_node("../Orb2").hide()
 	get_node("../Orb3").show()
-	get_node("../OrbTable").show()
+	get_node("../OrbTable2").show()
 
 
 func _on_Area_body1_entered(body):
 	get_node("../Orb").hide()
 	get_node("../Orb2").show()
-	get_node("../OrbTable2").show()
+	get_node("../OrbTable").show()
 
 
 func _on_Area_bodyGod_entered(body):
